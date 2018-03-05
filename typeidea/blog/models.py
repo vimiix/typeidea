@@ -11,8 +11,8 @@ class Post(models.Model):
         (2, "草稿"),
         (3, "删除"),
     )
-    titile = models.CharField(max_lengh=50, verbose_name="标题")
-    desc = models.CharField(max_lengh=255, blank=True, verbose_name="摘要")
+    titile = models.CharField(max_length=50, verbose_name="标题")
+    desc = models.CharField(max_length=255, blank=True, verbose_name="摘要")
     categry = models.ForeignKey('Categry', verbose_name="分类")
     tag = models.ManyToManyField('Tag', verbose_name="标签")
 
